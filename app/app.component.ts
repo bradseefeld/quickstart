@@ -85,7 +85,7 @@ export class AppComponent implements OnInit {
   getHeroes() {
     //this.heroService.getHeroes().then(h => this.heroes = h);
     var self = this;
-    this.heroService.getHeroes().then(function(h) { self.heroes = h; });
+    this.heroService.getHeroesSlowly().then(function(h) { self.heroes = h; });
   }
 
   //use angular init to load the heroes
