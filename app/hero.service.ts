@@ -62,17 +62,11 @@ export class HeroService {
     return this.post(hero);
   }
 
-
-
   getHero(id: number) {
-    var self = this;
-    return new Promise(function(resolve, reject) {
-      return self.getHeroes()
-        .then(function(heroes) {
-          var h = heroes.find(function(hero) {return hero.id === id;});
-          resolve(h);
-        });
-    });
+    return this.getHeroes()
+      .then(function(heroes) {
+        return heroes.find(function(hero) {return hero.id === id;});
+      });
   };
 
   getHero2(id: number) {

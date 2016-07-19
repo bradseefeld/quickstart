@@ -17,8 +17,6 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
   sub: any;
   navigated = false; // true if navigated here
 
-  hero: Hero;
-
   constructor(
     private heroService: HeroService,
     private route: ActivatedRoute) {
